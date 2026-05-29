@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: hos-stripe-bridge
+    runtime: node
+    plan: starter
+    buildCommand: ""
+    startCommand: "npm start"
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: GETRESPONSE_BASE_URL
+        value: https://api.getresponse.com/v3
+      - key: HOS_GETRESPONSE_CAMPAIGN_ID
+        value: f12ji
+      - key: HOS_BUYER_TAG_ID
+        value: 4P1aD
+      - key: STRIPE_PAYMENT_LINK_ID
+        value: plink_1TcIvYDfPgr5wAVlitvX7U2C
+      - key: GETRESPONSE_API_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
