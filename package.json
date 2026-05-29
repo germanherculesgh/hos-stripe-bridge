@@ -1,0 +1,14 @@
+{
+  "name": "hos-stripe-bridge",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hercules OS Stripe Payment Link to GetResponse buyer bridge",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test:health": "node -e \"fetch('http://127.0.0.1:'+(process.env.PORT||19001)+'/health').then(r=>r.text()).then(t=>console.log(t))\""
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
