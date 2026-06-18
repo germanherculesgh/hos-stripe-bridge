@@ -15,8 +15,22 @@ services:
         value: f12ji
       - key: HOS_BUYER_TAG_ID
         value: 4P1aD
+      - key: HOS_DECLINED_TAG_ID
+        sync: false
       - key: STRIPE_PAYMENT_LINK_ID
         value: plink_1TcIvYDfPgr5wAVlitvX7U2C
+      - key: STRIPE_ENVIRONMENT
+        value: test
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_QUICKSTART_PRICE_ID
+        sync: false
+      - key: QUICKSTART_SUCCESS_URL
+        value: https://herculeswellness.club/start-thank-you-buyer?session_id={CHECKOUT_SESSION_ID}
+      - key: QUICKSTART_CANCEL_URL
+        value: https://herculeswellness.club/start-thank-you-declined?checkout=cancelled
+      - key: QUICKSTART_ACCESS_URL
+        sync: false
       - key: GETRESPONSE_API_KEY
         sync: false
       - key: STRIPE_WEBHOOK_SECRET
