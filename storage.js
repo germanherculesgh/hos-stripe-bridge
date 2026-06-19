@@ -408,8 +408,8 @@ function createPostgresStore({connectionString, sslMode, poolMax, pgModule}) {
       [
         contact.id || null,
         email,
-        safeText(contact.first_name || contact.firstName || '', 120) || null,
-        safeText(contact.last_name || contact.lastName || '', 120) || null,
+        safeText(contact.first_name || contact.firstName || '', 120) || '',
+        safeText(contact.last_name || contact.lastName || '', 120) || '',
         contact.phone ? safeText(contact.phone, 40) : null,
         normalizeStatus(contact.status, 'active'),
       ],
